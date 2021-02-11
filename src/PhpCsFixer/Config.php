@@ -2,17 +2,21 @@
 
 namespace Braip\WayPhp\PhpCsFixer;
 
+use Braip\WayPhp\PhpCsFixer\Fixers\Prettier;
 use PhpCsFixer;
-use PhpCsFixer\Finder;
 
 class Config extends PhpCsFixer\Config
 {
-    public function __construct(Finder $finder = null)
+    /**
+     * @param \PhpCsFixer\Finder $finder
+     */
+    public function __construct(PhpCsFixer\Finder $finder = null)
     {
         parent::__construct();
 
-        $finder = $finder ?? Finder::create()->in(__DIR__);
-
-        $this->setFinder($finder);
+        $this->setFinder($finder)
+            ->registerCustomFixers([new Prettier()])
+            ->setRiskyAllowed(true)
+            ->setRules(include __DIR__.'/rules.php');
     }
 }

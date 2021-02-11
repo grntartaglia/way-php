@@ -1,5 +1,5 @@
 <?php
 
-use PhpCsFixer\Finder;
-
-return new \Braip\WayPhp\PhpCsFixer\Config();
+return new Braip\WayPhp\PhpCsFixer\Config(
+    PhpCsFixer\Finder::create()->in(__DIR__.'/src')
+);
