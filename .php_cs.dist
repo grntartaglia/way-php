@@ -1,3 +1,5 @@
 <?php
 
-return new Braip\WayPhp\PhpCsFixer\Config();
+use PhpCsFixer\Finder;
+
+return new \Braip\WayPhp\PhpCsFixer\Config();
