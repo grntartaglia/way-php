@@ -1,5 +1,6 @@
 {
-    "name": "gabrieltartaglia/way-php",
+    "name": "braip/way-php",
+    "version": "1.0",
     "authors": [
         {
             "name": "Gabriel Tartaglia",
