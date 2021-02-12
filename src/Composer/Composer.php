@@ -4,7 +4,7 @@ namespace Braip\WayPhp\Composer;
 
 class Composer
 {
-    public static function postInstall()
+    public static function npmInstall()
     {
         passthru('npm install');
     }

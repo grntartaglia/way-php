@@ -1,6 +1,6 @@
 {
     "name": "braip/way-php",
-    "version": "1.0",
+    "version": "1.0.1",
     "authors": [
         {
             "name": "Gabriel Tartaglia",
@@ -20,6 +20,8 @@
         }
     },
     "scripts": {
-        "post-install-cmd": "Braip\\WayPhp\\Composer\\Composer::postInstall"
+        "post-package-install": "Braip\\WayPhp\\Composer\\Composer::npmInstall",
+        "post-package-update": "Braip\\WayPhp\\Composer\\Composer::npmInstall",
+        "post-install-cmd": "Braip\\WayPhp\\Composer\\Composer::npmInstall"
     }
 }
