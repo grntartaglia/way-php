@@ -83,7 +83,7 @@ final class Prettier implements FixerInterface
         $prettier = __DIR__.'/../../../node_modules/.bin/prettier';
         $output   = [];
 
-        if (!file_exists($prettier)) {
+        if (! file_exists($prettier)) {
             throw Exception('Prettier não encontrado');
         }
 

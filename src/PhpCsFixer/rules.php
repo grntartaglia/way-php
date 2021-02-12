@@ -13,4 +13,17 @@ return [
             '='  => 'align_single_space_minimal',
         ],
     ],
+
+    'increment_style' => ['style' => 'post'],
+
+    'multiline_whitespace_before_semicolons' => ['strategy' => 'no_multi_line'],
+
+    'no_useless_return'                 => true,
+    'not_operator_with_successor_space' => true,
+
+    'visibility_required' => [
+        'elements' => ['method', 'property'],
+    ],
+
+    'yoda_style' => false,
 ];

@@ -6,6 +6,9 @@
             "email": "ga.tartaglia96@gmail.com"
         }
     ],
+    "require": {
+        "php": ">= 7.2"
+    },
     "require-dev": {
         "phpro/grumphp": "^0.19.1",
         "friendsofphp/php-cs-fixer": "^2.18"
@@ -16,8 +19,6 @@
         }
     },
     "scripts": {
-        "post-install-cmd": [
-            "Braip\\WayPhp\\Composer\\Composer::postInstall"
-        ]
+        "post-install-cmd": "Braip\\WayPhp\\Composer\\Composer::postInstall"
     }
 }
