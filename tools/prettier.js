@@ -11,6 +11,7 @@ stdin.on('data', function(chunk) {
 stdin.on('end', function() {
   console.log(prettier.format(data, {
       plugins: [phpPlugin],
-      parser: 'php'
+      parser: 'php',
+      singleQuote: true
   }));
 });
