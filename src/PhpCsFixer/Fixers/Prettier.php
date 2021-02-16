@@ -80,14 +80,18 @@ final class Prettier implements FixerInterface
      */
     private function prettier(string $path)
     {
-        $prettier = __DIR__.'/../../../node_modules/.bin/prettier';
+        $prettier = __DIR__.'/../../../tools/prettier.js';
         $output   = [];
 
         if (! file_exists($prettier)) {
-            throw Exception('Prettier não encontrado');
+            throw new Exception('Prettier não encontrado');
         }
 
-        exec("$prettier $path", $output);
+        exec("node $prettier < $path", $output);
+
+        if (! $output) {
+            throw new Exception('Falha ao executar Prettier');
+        }
 
         return implode("\n", $output);
     }
