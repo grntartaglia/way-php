@@ -27,6 +27,8 @@ return [
 
     'yoda_style' => false,
 
+    'phpdoc_separation' => false,
+
     'php_unit_method_casing'   => ['case' => 'snake_case'],
     'php_unit_test_annotation' => ['style' => 'annotation'],
 ];
