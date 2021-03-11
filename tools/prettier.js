@@ -12,6 +12,7 @@ stdin.on('end', function() {
   console.log(prettier.format(data, {
       plugins: [phpPlugin],
       parser: 'php',
-      singleQuote: true
+      singleQuote: true,
+      printWidth: 100,
   }));
 });

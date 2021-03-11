@@ -10,7 +10,6 @@ return [
         'default'   => 'single_space',
         'operators' => [
             '=>' => 'align_single_space_minimal',
-            '='  => 'align_single_space_minimal',
         ],
     ],
 
