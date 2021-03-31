@@ -42,11 +42,7 @@ final class Prettier implements FixerInterface
      */
     public function fix(SplFileInfo $file, Tokens $tokens)
     {
-        if (
-            0 < $tokens->count() &&
-            $this->isCandidate($tokens) &&
-            $this->supports($file)
-        ) {
+        if (0 < $tokens->count() && $this->isCandidate($tokens) && $this->supports($file)) {
             $this->applyFix($file, $tokens);
         }
     }
@@ -81,7 +77,7 @@ final class Prettier implements FixerInterface
     private function prettier(string $path)
     {
         $prettier = __DIR__.'/../../../tools/prettier.js';
-        $output   = [];
+        $output = [];
 
         if (! file_exists($prettier)) {
             throw new Exception('Prettier não encontrado');
